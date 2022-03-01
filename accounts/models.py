@@ -60,7 +60,6 @@ class User(AbstractUser):
     username = models.CharField(max_length=255, blank=True, )
     first_name = models.CharField(_('first name'), max_length=150)
     last_name = models.CharField(_('last name'), max_length=150)
-
     email = models.EmailField(
         verbose_name='email address',
         help_text=_('Correo electrónico'),
@@ -114,6 +113,9 @@ class Profile(AbstractETruck):
     is_phone_verified = models.BooleanField(
         default=False,
     )
+
+    class Meta:
+        verbose_name = "Profile"
 
     def __str__(self):
         return self.user.email

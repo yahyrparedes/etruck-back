@@ -124,8 +124,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# AUTH_USER_MODEL = 'users.User'
-# AUTH_PROFILE_MODULE = 'users.Profile'
 AUTH_USER_MODEL = 'accounts.User'
 AUTH_PROFILE_MODULE = 'accounts.Profile'
 # AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend'] # new

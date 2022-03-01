@@ -3,20 +3,27 @@
 ### Requirement
 
 - Python-3*
-- pip
+- pip - virtualenv
+
+
 
 
 ### Run Develoment Mode
 
-1. Execute migrations
-2. Load data for fixtures (gender, documenttype)
-3. Create super user for access /admin (email, first_name, last_name, password)
-4. Run Server
+1. Create Virtual Enviroment
+1. Activate Virtual Enviroment
+2. Install dependencies 
+3. Execute migrations
+4. Load data for fixtures (gender, documenttype)
+5. Create super user for access /admin (email, first_name, last_name, password)
+6. Run Server
 
 ### Commands
 
-- ```$ python manage.py migrate```
-- ```$ python manage.py laoddata gender.json documenttype.json```
+- ```$ virtualenv venv```
+- ```$ .\venv\Scripts\activate  or source venv/bin/activate```
+- ```$ pip install -r requirements.txt```
+- ```$ python manage.py loaddata gender.json documenttype.json```
 - ```$ python manage.py createsuperuser```
 - ```$ python manage.py runserver``` 
 
